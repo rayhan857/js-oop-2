@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-oop-activity3static </title>
+</head>
+<body>
+
+
+    <h1>this is about OOP JAVASCRIPT static method </h1>
+    <p>a static method is a method that belongs to the class itself, not to any specific instance of the class.</p>
+    <p id="hello"></p>
+    <p id="hello1"></p>
+    <p id="hi"></p>
+    <p id="welcome"></p>
+
+<script>
+class greeting {
+    static sayHello() {
+        return "Hello, World!";
+    }
+
+    static sayHi(name) {
+        return `Hi, ${name}!`;
+    }
+
+    static welcomeMessage(name) {
+        return `Welcome to JavaScript, ${name}!`;
+    }
+}
+document.getElementById("hello").textContent = greeting.sayHello();
+document.getElementById("hello1").textContent = greeting.sayHello();
+document.getElementById("hi").textContent = greeting.sayHi("Alice");
+document.getElementById("welcome").textContent = greeting.welcomeMessage("Alice");
+</script>
+    
+</body>
+</html>
