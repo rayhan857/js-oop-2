@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-oop-activity2</title>
+</head>
+<body>
+    
+
+<p id="details"></p>
+
+<script>
+class person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    calculateyearOfBirth() {
+        const currentYear = new Date().getFullYear();
+        return currentYear - this.age;
+    }
+}
+
+class studetn extends person {
+    constructor(name, age, grade) {
+        super(name, age);
+        this.grade = grade;
+    }
+
+    getDetails() {
+        return `Name: ${this.name}, Age: ${this.age}, Grade: ${this.grade}, Year of Birth: ${this.calculateyearOfBirth()}`;
+    }
+}
+
+const student1 = new studetn("Alice", 20, "A");
+document.getElementById("details").innerHTML = student1.getDetails();
+
+</script>
+
+
+</body>
+</html>
