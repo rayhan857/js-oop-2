@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-oop-2student</title>
+</head>
+<body>
+    
+    
+<p id="student1"></p>
+<p id="student2"></p>
+
+
+<script>
+    class student {
+        constructor(name, age, grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }
+    }
+
+    const student1 = new student("Alice", 20, "A");
+    const student2 = new student("Bob", 22, "B");
+
+    document.getElementById("student1").textContent = `Name: ${student1.name}, Age: ${student1.age}, Grade: ${student1.grade}`;
+    document.getElementById("student2").textContent = `Name: ${student2.name}, Age: ${student2.age}, Grade: ${student2.grade}`;
+    </script>
+
+
+</body>
+</html>
